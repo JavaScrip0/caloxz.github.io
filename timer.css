@@ -10,7 +10,7 @@
 .container{
     width: 100vw;
     height: 100vw;
-    background-image: url('../imgs/ug.webp');
+    background-image: url('imgs/ug.webp');
     background-position: center;
     background-size: cover;
     padding: 0 8%;
