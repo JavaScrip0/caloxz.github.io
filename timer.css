@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Playpen Sans',sans-serif ;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vw;
+    background-image: url('../imgs/ug.webp');
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+}
+
+.logo{
+    width: 120px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.content{
+    top: 40%;
+    position: absolute;
+    transform: translateY(-50%);
+    color:#fff;
+}
+.content h1{
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.content h1 span{
+    color: rgba(131, 127, 127, 0.719);
+}
+.content button{
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 18px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 30px ;
+}
+.content button .bx{
+    width: 20px;
+    margin-left: 1px;
+
+}
+
+.wait{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wait div{
+    flex-basis: 100px;
+
+}
+
+.wait div p{
+    font-size: 60px;
+    margin-bottom: -14px; 
+}
+
+.clock{
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: clock 4s linear infinite;
+
+}
+@keyframes clock{
+    0%{
+        bottom: 0;
+        opacity: 0;
+        transform: translateX(-36deg);
+    }
+    100%{
+        bottom: 105%;
+        opacity: 1;
+        transform: translateX(36deg);
+    }
+}

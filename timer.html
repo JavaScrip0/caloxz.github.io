@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/timer.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Timer</title>
+</head>
+<body>
+    <div class="container">
+     <img src="../imgs/k.webp" class="logo">
+
+     <div class="content">
+        <p>Market Day For The Next Year </p>
+        <h1>we'll  <span> wait</span> with you</h1>
+        <div class="wait">
+            <div>
+                <p id="days">00</p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p id="hours">00</p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p id="minutes">00</p>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <p id="seconds">00</p>
+                <span>Seconds</span>
+            </div>
+        </div>
+        <button type="button">
+         <a style="display: flex; text-decoration: none; color: #fff;" href="market.html" target="_blank">Home <i style="margin-top: 5px;" class='bx bx-home' ></i> </a>
+        </button>
+    </div>
+    <img src="../imgs/clock.png" class="clock">
+    </div>
+
+
+
+
+<script>
+ 
+ 
+ // تحديد التاريخ المستهدف (25 سبتمبر 2025)
+ var countDownDate = new Date("Sep 25, 2025 00:00:00").getTime();
+
+// تحديث العد التنازلي كل ثانية
+var x = setInterval(function() {
+
+    // الحصول على الوقت الحالي
+    var now = new Date().getTime();
+
+    // حساب المسافة الزمنية بين الآن والتاريخ المستهدف
+    var distance = countDownDate - now;
+
+    // حساب الأيام، الساعات، الدقائق، والثواني
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // عرض القيم في HTML
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    // عند انتهاء العد التنازلي
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
