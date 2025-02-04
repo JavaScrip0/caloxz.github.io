@@ -11,6 +11,17 @@ body{
     background-color: #252954;
 }
 
+.nonew{
+    text-decoration: none;
+    colour: white;
+    
+}
+.nonew::after{
+    content: "";
+    color: black;
+    top: 0;
+}
+
 .main{
     padding: 0 88px;
     position: relative;
