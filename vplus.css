@@ -13,19 +13,23 @@ body{
 
 .nonew{
     text-decoration: none;
-    colour: white;
+    color: white;
+    position: relative;
     
 }
 .nonew::after{
     content: "";
+    position: absolute; 
     color: black;
     top: 0;
     left: 0;
+    width: 100%;
+    hight: 2px;
     transform: ScaleX(0);
-    transition: transform 0.9s ease-in-out infinite;
+    transition: transform 0.9s ease-in-out;
 }
 .nonew:hover{
-    colour: black;
+    color: black;
 }
 .nonew::after:hover{
     transform: ScaleX(1);
