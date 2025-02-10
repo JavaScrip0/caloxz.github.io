@@ -159,6 +159,10 @@ body{
     display: flex;
 }
 
+.top-container .info-buttons .when{
+    background-color: #000;
+}
+
 .top-container .info-btn{
     cursor: pointer;
     padding: 8px 38px;
