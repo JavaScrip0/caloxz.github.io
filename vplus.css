@@ -158,9 +158,17 @@ body{
 .top-container .info-buttons{
     display: flex;
 }
-
 .top-container .info-buttons .when{
+    background-color: transparent;
+    color: white;
+    border-radius: 18px;
+    
+    transition: all 0.4s ease
+}
+
+.top-container .info-buttons .when:hover{
     background-color: #000;
+    
 }
 
 .top-container .info-btn{
