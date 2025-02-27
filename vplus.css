@@ -11,13 +11,13 @@ body{
     background-color: #252954;
 }
 
-.nonew{
+.main .nonew{
     text-decoration: none;
     color: white;
     position: relative;
     
 }
-.nonew::after{
+.main .nonew::after{
     content: "";
     position: absolute; 
     color: black;
@@ -28,10 +28,10 @@ body{
     transform: ScaleX(0);
     transition: transform 0.6s ease-in-out;
 }
-.nonew:hover{
+.main .nonew:hover{
     color: white;
 }
-.nonew::after:hover{
+.main .nonew::after:hover{
     transform: ScaleX(1);
 }
 
