@@ -7,7 +7,9 @@
     box-sizing: border-box;
 }
 
-body{overflow: hidden;}
+body{overflow: hidden;
+    overflow-y: auto;
+}
 
 .container{
     width: 100vw;
